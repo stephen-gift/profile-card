@@ -3,9 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("loadingOverlay").style.display = "none";
     document.getElementById("content").style.display = "flex";
   }, 2000);
-});
 
-document.addEventListener("DOMContentLoaded", () => {
   const card = document.querySelector(".profile-card");
 
   card.addEventListener("mousemove", (e) => {
@@ -41,17 +39,17 @@ document.addEventListener("DOMContentLoaded", () => {
   card.addEventListener("mouseleave", () => {
     card.style.transform = "rotateY(0deg) rotateX(0deg)";
   });
+
+  function updateUTCTime() {
+    const currentTimeElement = document.querySelector(
+      '[data-testid="currentTimeUTC"]'
+    );
+    const now = new Date();
+    const utcTime = now.toUTCString();
+    currentTimeElement.textContent = `Current UTC Time: ${utcTime}`;
+    currentTimeElement.style.animation = "fadeIn 1s ease-in-out";
+  }
+
+  updateUTCTime();
+  setInterval(updateUTCTime, 1000);
 });
-
-function updateUTCTime() {
-  const currentTimeElement = document.querySelector(
-    '[data-testid="currentTimeUTC"]'
-  );
-  const now = new Date();
-  const utcTime = now.toUTCString();
-  currentTimeElement.textContent = `Current UTC Time: ${utcTime}`;
-  currentTimeElement.style.animation = "fadeIn 1s ease-in-out";
-}
-
-updateUTCTime();
-setInterval(updateUTCTime, 1000);

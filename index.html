@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stephen Gift | Profile Card</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="loading-overlay" id="loadingOverlay">
+      <div class="spinner"></div>
+      <p>Loading...</p>
+    </div>
+    <div class="profile-card" id="content">
+      <div class="profile-picture-wrapper" data-testid="profilePicture">
+        <img
+          src="public/images/profile4096x4096.png"
+          alt="Profile Picture"
+          class="profile-picture"
+        />
+        <div class="overlay"></div>
+      </div>
+      <div class="profile-content">
+        <h1 class="full-name" data-testid="fullName">Stephen Gift Dada</h1>
+        <h2 class="job-title" data-testid="jobTitle">Frontend Developer</h2>
+        <p class="short-bio" data-testid="shortBio">
+          I am a passionate software engineer with over 5 years of experience in
+          building scalable web applications. I specialize in JavaScript, React,
+          and Node.js. I love solving complex problems and contributing to
+          open-source projects.
+        </p>
+        <p class="current-location" data-testid="currentLocation">
+          Lagos, Nigeria
+        </p>
+        <p class="email-address" data-testid="emailAddress">
+          stephengift43@gmail.com
+        </p>
+        <div class="social-links" data-testid="socialLinks">
+          <a
+            href="https://www.linkedin.com/in/stephen-gift-8894131b6"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://github.com/stephen-gift" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="https://x.com/_stephenGift" target="_blank">
+            <i class="fab fa-x-twitter"></i> Twitter
+          </a>
+        </div>
+        <p class="current-time-utc" data-testid="currentTimeUTC"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
